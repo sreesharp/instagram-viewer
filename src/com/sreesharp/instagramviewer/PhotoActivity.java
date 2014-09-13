@@ -54,7 +54,7 @@ public class PhotoActivity extends Activity {
     					photo.userName = photoJSON.getJSONObject("user").getString("username");
     					photo.imageUrl = photoJSON.getJSONObject("images").getJSONObject("standard_resolution").getString("url");
     					photo.imageHeight = photoJSON.getJSONObject("images").getJSONObject("standard_resolution").getInt("height");
-    					if(photoJSON.getJSONObject("caption")!= null)
+    					if(photoJSON.getString("caption")!= null)
     						photo.caption = photoJSON.getJSONObject("caption").getString("text");
     					photo.likesCount = photoJSON.getJSONObject("likes").getInt("count");
     					photo.createdTime = photoJSON.getLong("created_time");
